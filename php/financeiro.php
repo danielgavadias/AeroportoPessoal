@@ -1,20 +1,26 @@
 <?php 
+    if($_SERVER["REQUEST_METHOD"] == "POST") 
+    {
+    $responsavel = $_POST["responsavel"];
+    $empresa = $_POST["empresa"];
+    $projeto = $_POST["projeto"];
+    $telefone = $_POST["telefone"];
+    $email = $_POST["email"];
+    $prazo = $_POST["prazo"];
 
+    $orcamentos = [
 
+    "responsavel" => $responsavel,
+    "empresa" => $empresa,
+    "projeto" => $projeto,
+    "telefone" => $telefone,
+    "email" => $email,
+    "prazo" => $prazo,
+    ];
 
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +43,9 @@
     <!-- Cabeçalho principal -->
      <div class="cabecalho">
         <h1>FINANCEIRO</h1>
-        <p>Consulte o preço dos nossos projetos e os projetos que ainda aguardam confirmação de pagamento</p>
+        <p>Consulte os projetos que ainda aguardam confirmação de pagamento</p>
+
+        
      
     
     

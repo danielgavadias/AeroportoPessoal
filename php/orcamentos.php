@@ -1,12 +1,13 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-$responsavel = $_POST["responsavel"];
-$empresa = $_POST["empresa"];
-$projeto = $_POST["projeto"];
-$telefone = $_POST["telefone"];
-$email = $_POST["email"];
-$prazo = $_POST["prazo"];
+    $responsavel = $_POST["responsavel"];
+    $empresa = $_POST["empresa"];
+    $projeto = $_POST["projeto"];
+    $telefone = $_POST["telefone"];
+    $email = $_POST["email"];
+    $prazo = $_POST["prazo"];
+
 }
 
 
