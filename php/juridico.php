@@ -11,7 +11,7 @@
     <div class="Nav-bar">
         <img src="imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
         <a href="index.html">INICIO</a>
-        <a href="solicitar_projeto.html">Orçamento</a>
+        <a href="solicitar_projeto.html">ORÇAMENTO</a>
         <a href="#">FINANCEIRO</a>
         <a href="juridico.php">JURIDICO</a>
         <a href="#">PROJETOS</a>
