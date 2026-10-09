@@ -12,7 +12,7 @@
         <img src="imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
         <a href="#">INICIO</a>
         <a href="php/orcamentos.php">Orçamento</a>
-        <a href="#">FINANCEIRO</a>
+        <a href="php/financeiro.php">FINANCEIRO</a>
         <a href="php/juridico.php">JURIDICO</a>
         <a href="php/projetos.php">PROJETOS</a>
         <a href="#">DESENVOLVIMENTO</a>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="habilidades">
                     <div class="habilidade">
-                        <h3>HTML</h3>
+                        <h3>HTML</h3>aaaaaaaaaaaaaaaaaaaa
                         <p>Estruturaçao de paginas web.</p>
                     </div>
                     <div class="habilidade">
