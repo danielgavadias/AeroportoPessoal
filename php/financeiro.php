@@ -7,8 +7,9 @@
     $telefone = $_POST["telefone"];
     $email = $_POST["email"];
     $prazo = $_POST["prazo"];
+    $pago = $_POST["pago"];
 
-    $orcamentos = [
+    $novoOrcamento = [
 
     "responsavel" => $responsavel,
     "empresa" => $empresa,
@@ -18,7 +19,21 @@
     "prazo" => $prazo,
     ];
 
-    }
+    $conteudoJson = file_get_contents(__DIR__ . "/dados/orcamentos.json");
+    $orcamentos = json_decode($conteudoJson, true);
+    $orcamentos[] = $novoOrcamento;
+
+    $jsonAtualizado = json_encode(
+        $orcamentos,
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+    );
+
+    file_put_contents(__DIR__ . "/dados/orcamentos.json", $jsonAtualizado);
+}
+
+$conteudoJson = file_get_contents(__DIR__ . "/dados/orcamentos.json");
+$orcamentos = json_decode($conteudoJson, true);
+
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +59,18 @@
      <div class="cabecalho">
         <h1>FINANCEIRO</h1>
         <p>Consulte os projetos que ainda aguardam confirmação de pagamento</p>
+
+        <?php foreach($orcamentos as $orcamento){?>
+        <p>Responsavel: <?= $orcamento["responsavel"] ?></p>
+        <p>Empresa: <?= $orcamento["responsavel"] ?></p>
+        <p>Projeto: <?= $orcamento["responsavel"] ?></p>
+        <p>Telefone: <?= $orcamento["responsavel"] ?></p>
+        <p>Email: <?= $orcamento["responsavel"] ?></p>
+        <p>Prazo: <?= $orcamento["responsavel"] ?></p>
+
+        <button class=""></button>
+
+
 
         
      
