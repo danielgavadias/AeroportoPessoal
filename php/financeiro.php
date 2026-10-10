@@ -8,6 +8,7 @@
     $email = $_POST["email"];
     $prazo = $_POST["prazo"];
     $pago = $_POST["pago"];
+    $pago = false;
 
     $novoOrcamento = [
 
@@ -17,6 +18,7 @@
     "telefone" => $telefone,
     "email" => $email,
     "prazo" => $prazo,
+    "pago" => $pago
     ];
 
     $conteudoJson = file_get_contents(__DIR__ . "/dados/orcamentos.json");
@@ -37,7 +39,7 @@ $orcamentos = json_decode($conteudoJson, true);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,6 +47,7 @@ $orcamentos = json_decode($conteudoJson, true);
 </head>
 <body>
     
+<form method="POST">
     <div class="Nav-bar">
         <img src="imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
         <a href="index.html">INICIO</a>
@@ -60,31 +63,32 @@ $orcamentos = json_decode($conteudoJson, true);
         <h1>FINANCEIRO</h1>
         <p>Consulte os projetos que ainda aguardam confirmação de pagamento</p>
 
-        <?php foreach($orcamentos as $orcamento){?>
-        <p>Responsavel: <?= $orcamento["responsavel"] ?></p>
-        <p>Empresa: <?= $orcamento["responsavel"] ?></p>
-        <p>Projeto: <?= $orcamento["responsavel"] ?></p>
-        <p>Telefone: <?= $orcamento["responsavel"] ?></p>
-        <p>Email: <?= $orcamento["responsavel"] ?></p>
-        <p>Prazo: <?= $orcamento["responsavel"] ?></p>
+        <?php foreach($orcamentos as $indice => $orcamento){?>
+        <p>Responsavel: <?= $orcamento["responsavel"]?></p>
+        <p>Empresa: <?= $orcamento["responsavel"]?></p>
+        <p>Projeto: <?= $orcamento["responsavel"]?></p>
+        <p>Telefone: <?= $orcamento["responsavel"]?></p>
+        <p>Email: <?= $orcamento["responsavel"]?></p>
+        <p>Prazo: <?= $orcamento["responsavel"]?></p>
 
-        <button class=""></button>
+        <?php if($pago == false){?>
+            
+            <button class="submit" name="pagar">O PAGAMENTO JÁ FOI EFETUADO: ATUALIZAR</button>
+            <?php 
+                
+                if (isset($_POST["pagar"])) 
+                {
+                    $pago = true;
+                }
+            }
+            ?>
 
 
-
-        
-     
-    
-    
-    
-    
-    
-    
     
     </div>
 
 
     
-    
+    </form> 
 </body>
 </html>
