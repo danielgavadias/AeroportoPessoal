@@ -62,7 +62,10 @@ $orcamentos = json_decode($conteudoJson, true);
      <div class="cabecalho">
         <h1>FINANCEIRO</h1>
         <p>Consulte os projetos que ainda aguardam confirmação de pagamento</p>
+    </div>
 
+    <div class="orcamento">
+        
         <?php foreach($orcamentos as $indice => $orcamento){?>
         <p>Responsavel: <?= $orcamento["responsavel"]?></p>
         <p>Empresa: <?= $orcamento["responsavel"]?></p>
@@ -82,13 +85,10 @@ $orcamentos = json_decode($conteudoJson, true);
                 }
             }
             ?>
-
-
     
     </div>
 
-
-    
+  
     </form> 
 </body>
 </html>
