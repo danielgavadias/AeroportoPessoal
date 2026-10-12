@@ -1,6 +1,26 @@
 <?php 
-    if($_SERVER["REQUEST_METHOD"] == "POST") 
-    {
+    
+if (isset($_POST["pagar"])) 
+{   
+    $indice = $_POST["indice"];
+
+    $conteudoJson = file_get_contents(__DIR__ . "/dados/orcamentos.json");
+    $orcamentos = json_decode($conteudoJson, true);
+
+    if (isset($orcamentos[$indice])) {
+        $orcamentos[$indice]["pago"] = true;
+
+        $jsonAtualizado = json_encode(
+            $orcamentos,
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+        );
+
+        file_put_contents(__DIR__ . "/dados/orcamentos.json",$jsonAtualizado);
+    }
+} 
+
+elseif ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
     $responsavel = $_POST["responsavel"];
     $empresa = $_POST["empresa"];
     $projeto = $_POST["projeto"];
@@ -11,21 +31,21 @@
     $pago = false;
 
     $novoOrcamento = [
-
-    "responsavel" => $responsavel,
-    "empresa" => $empresa,
-    "projeto" => $projeto,
-    "telefone" => $telefone,
-    "email" => $email,
-    "prazo" => $prazo,
-    "pago" => $pago
+        "responsavel" => $responsavel,
+        "empresa" => $empresa,
+        "projeto" => $projeto,
+        "telefone" => $telefone,
+        "email" => $email,
+        "prazo" => $prazo,
+        "pago" => $pago
     ];
 
     $conteudoJson = file_get_contents(__DIR__ . "/dados/orcamentos.json");
     $orcamentos = json_decode($conteudoJson, true);
     $orcamentos[] = $novoOrcamento;
 
-    $jsonAtualizado = json_encode(
+    $jsonAtualizado = json_encode
+    (
         $orcamentos,
         JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
     );
@@ -65,7 +85,7 @@ $orcamentos = json_decode($conteudoJson, true);
     </div>
 
     <div class="orcamento">
-        
+
         <?php foreach($orcamentos as $indice => $orcamento){?>
         <p>Responsavel: <?= $orcamento["responsavel"]?></p>
         <p>Empresa: <?= $orcamento["responsavel"]?></p>
