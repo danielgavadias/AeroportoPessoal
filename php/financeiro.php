@@ -1,13 +1,15 @@
 <?php 
     
-if (isset($_POST["pagar"])) 
+if (isset($_POST["pagar"])) //Verifica SE o orçamento já foi pago
 {   
     $indice = $_POST["indice"];
 
-    $conteudoJson = file_get_contents(__DIR__ . "/dados/orcamentos.json");
+    $conteudoJson = file_get_contents(__DIR__ . "orcamentos.json");
     $orcamentos = json_decode($conteudoJson, true);
 
-    if (isset($orcamentos[$indice])) {
+    if (isset($orcamentos[$indice])) 
+
+    {
         $orcamentos[$indice]["pago"] = true;
 
         $jsonAtualizado = json_encode(
@@ -15,7 +17,7 @@ if (isset($_POST["pagar"]))
             JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
         );
 
-        file_put_contents(__DIR__ . "/dados/orcamentos.json",$jsonAtualizado);
+        file_put_contents(__DIR__ . "orcamentos.json",$jsonAtualizado);
     }
 } 
 
@@ -27,7 +29,6 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
     $telefone = $_POST["telefone"];
     $email = $_POST["email"];
     $prazo = $_POST["prazo"];
-    $pago = $_POST["pago"];
     $pago = false;
 
     $novoOrcamento = [
@@ -40,7 +41,7 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
         "pago" => $pago
     ];
 
-    $conteudoJson = file_get_contents(__DIR__ . "/dados/orcamentos.json");
+    $conteudoJson = file_get_contents(__DIR__ . "orcamentos.json");
     $orcamentos = json_decode($conteudoJson, true);
     $orcamentos[] = $novoOrcamento;
 
@@ -50,10 +51,10 @@ elseif ($_SERVER["REQUEST_METHOD"] == "POST")
         JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
     );
 
-    file_put_contents(__DIR__ . "/dados/orcamentos.json", $jsonAtualizado);
+    file_put_contents(__DIR__ . "orcamentos.json", $jsonAtualizado);
 }
 
-$conteudoJson = file_get_contents(__DIR__ . "/dados/orcamentos.json");
+$conteudoJson = file_get_contents(__DIR__ . "orcamentos.json");
 $orcamentos = json_decode($conteudoJson, true);
 
 ?>
@@ -88,27 +89,24 @@ $orcamentos = json_decode($conteudoJson, true);
 
         <?php foreach($orcamentos as $indice => $orcamento){?>
         <p>Responsavel: <?= $orcamento["responsavel"]?></p>
-        <p>Empresa: <?= $orcamento["responsavel"]?></p>
-        <p>Projeto: <?= $orcamento["responsavel"]?></p>
-        <p>Telefone: <?= $orcamento["responsavel"]?></p>
-        <p>Email: <?= $orcamento["responsavel"]?></p>
-        <p>Prazo: <?= $orcamento["responsavel"]?></p>
+        <p>Empresa: <?= $orcamento["empresa"]?></p>
+        <p>Projeto: <?= $orcamento["projeto"]?></p>
+        <p>Telefone: <?= $orcamento["telefone"]?></p>
+        <p>Email: <?= $orcamento["email"]?></p>
+        <p>Prazo: <?= $orcamento["prazo"]?></p>
 
-        <?php if($pago == false){?>
+        <?php if($orcamento["pago"] == false){?>
             
-            <button class="submit" name="pagar">O PAGAMENTO JÁ FOI EFETUADO: ATUALIZAR</button>
-            <?php 
-                
-                if (isset($_POST["pagar"])) 
-                {
-                    $pago = true;
-                }
-            }
-            ?>
+        <input type="hidden" name="indice" value="<?= $indice; ?>">   
+        
+        <button class="submit" name="pagar">
+            O PAGAMENTO JÁ FOI EFETUADO: ATUALIZAR
+        </button>
+
+        <?php }} ?>
     
     </div>
 
-  
     </form> 
 </body>
 </html>
