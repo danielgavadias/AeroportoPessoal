@@ -89,7 +89,6 @@ $orcamentos = json_decode($conteudoJson, true);
 
         <?php }} ?>
 
-        
 
     <?php if(empty($orcamentos)) { ?>
         
