@@ -34,18 +34,19 @@ $orcamentos = json_decode($conteudoJson, true);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/financeiro.css">
     <title>Financeiro</title>
 </head>
 <body>
     
     <div class="Nav-bar"><!--Nav-bar-->
-        <img src="imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
-        <a href="index.html">INICIO</a>
-        <a href="solicitar_projeto.html">ORÇAMENTO</a>
-        <a href="financeiro.php">FINANCEIRO</a>
-        <a href="juridico.php">JURIDICO</a>
-        <a href="#">PROJETOS</a>
-        <a href="#">DESENVOLVIMENTO</a>
+         <img src="../imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
+            <a href="../index.php">INICIO</a>
+            <a href="orcamento.php">ORÇAMENTO</a>
+            <a href="financeiro.php">FINANCEIRO</a>
+            <a href="juridico.php">JURIDICO</a>
+            <a href="projetos.php">PROJETOS</a>
+            <a href="desenvolivmento.php">DESENVOLVIMENTO</a>
     </div>
 
     <!-- Cabeçalho principal -->
