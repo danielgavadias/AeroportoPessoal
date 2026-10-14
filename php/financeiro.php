@@ -6,6 +6,7 @@ if (isset($_POST["pagar"]))
 //VERIFICA SE(if) O VALOR EXISTE/FOI PAGO(isset)
 {   
     $indice = $_POST["indice"];
+    $valorf = $_POST["valorf"];
 
     $conteudoJson = file_get_contents(__DIR__ . "/orcamentos.json");
     $orcamentos = json_decode($conteudoJson, true);
@@ -75,11 +76,13 @@ $orcamentos = json_decode($conteudoJson, true);
         ?>
 
         <form method="POST">
+            <input type="hidden" name="indice" value="<?= $indice; ?>">  
             
-            <input type="hidden" name="indice" value="<?= $indice; ?>">   
+            <label for="valorf">INSIRA O VALOR: </label>
+            <input type="number" name="valorf" value="<?= $indice; ?>"> 
 
             <button class="submit" name="pagar">
-                O PAGAMENTO JÁ FOI EFETUADO: ATUALIZAR
+                PROPOR VALOR
             </button>
             
         </form>
