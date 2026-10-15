@@ -24,7 +24,7 @@ void main ()
         case 2:
             registro();
         break;
-    a
+    
         case 0:
             printf("================================");
             printf("\n      Sistema encerrado         ");
