@@ -71,23 +71,30 @@ $orcamentos = json_decode($conteudoJson, true);
         <p>Telefone: <?= $orcamento["telefone"]?></p>
         <p>Email: <?= $orcamento["email"]?></p>
         <p>Prazo: <?= $orcamento["prazo"]?></p>
-        <br>
+     
+        
+        
         <?php 
             if($orcamento["pago"] == false){
         ?>
 
         <form method="POST">
+                
             <input type="hidden" name="indice" value="<?= $indice; ?>">  
             
-            <label for="valor">INSIRA O VALOR: </label>
-            <input type="number" name="valor" value="<?= $indice; ?>"> 
+                <label for="valor">INSIRA O VALOR: </label>
+                <input type="number" name="valor" value="<?= $indice; ?>"> 
 
-            <button class="submit" name="pagar"> PROPOR VALOR </button>
-            
+                <button class="submit" name="pagar"> PROPOR VALOR </button><br>
+
+            <?php } else { ?>
+
+                <p>Valor: <?= $orcamento["valor"]?></p> <br>
+                
+            <?php }} ?>
         </form>
 
-        <?php }} ?>
-
+        
     <?php if(empty($orcamentos)) { ?>
         
             <h2>Nenhum orçamento foi efetuado ainda</h2>
