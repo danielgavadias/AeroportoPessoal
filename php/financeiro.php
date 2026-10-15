@@ -71,7 +71,7 @@ $orcamentos = json_decode($conteudoJson, true);
         <p>Telefone: <?= $orcamento["telefone"]?></p>
         <p>Email: <?= $orcamento["email"]?></p>
         <p>Prazo: <?= $orcamento["prazo"]?></p>
-        <br><b
+        <br>
         <?php 
             if($orcamento["pago"] == false){
         ?>
