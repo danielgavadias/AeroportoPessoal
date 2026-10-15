@@ -44,11 +44,11 @@ $orcamentos = json_decode($conteudoJson, true);
     <div class="Nav-bar"><!--Nav-bar-->
          <img src="../imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
             <a href="../index.php">INICIO</a>
-            <a href="/php/orcamento.php">ORÇAMENTO</a>
-            <a href="/php/financeiro.php">FINANCEIRO</a>
-            <a href="/php/juridico.php">JURIDICO</a>
-            <a href="/php/projetos.php">PROJETOS</a>
-            <a href="/php/desenvolivmento.php">DESENVOLVIMENTO</a>
+            <a href="orcamento.php">ORÇAMENTO</a>
+            <a href="financeiro.php">FINANCEIRO</a>
+            <a href="juridico.php">JURIDICO</a>
+            <a href="projetos.php">PROJETOS</a>
+            <a href="desenvolivmento.php">DESENVOLVIMENTO</a>
     </div>
 
     <!-- Cabeçalho principal -->
