@@ -63,7 +63,7 @@ $orcamentos = json_decode($conteudoJson, true);
     <?php 
         foreach($orcamentos as $indice => $orcamento){
     ?>
-        <br><br>
+        <br>
         <p>Responsavel: <?= $orcamento["responsavel"]?></p>
         <p>Empresa: <?= $orcamento["empresa"]?></p>
         <p>Nome do projeto: <?= $orcamento["nomeProjeto"]?></p>
@@ -71,7 +71,7 @@ $orcamentos = json_decode($conteudoJson, true);
         <p>Telefone: <?= $orcamento["telefone"]?></p>
         <p>Email: <?= $orcamento["email"]?></p>
         <p>Prazo: <?= $orcamento["prazo"]?></p>
-        <br><br>
+        <br><b
         <?php 
             if($orcamento["pago"] == false){
         ?>
