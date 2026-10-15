@@ -62,12 +62,12 @@ $orcamentos = json_decode(file_get_contents($arquivo), true);
 <body>
         <div class="Nav-bar">
         <img src="imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
-        <a href="#">INICIO</a>
-        <a href="orcamentos.php">Orçamento</a>
-        <a href="#">FINANCEIRO</a>
-        <a href="juridico.php">JURIDICO</a>
-        <a href="projetos.php">PROJETOS</a>
-        <a href="#">DESENVOLVIMENTO</a>
+        <a href="../index.php">INICIO</a>
+            <a href="orcamento.php">ORÇAMENTO</a>
+            <a href="financeiro.php">FINANCEIRO</a>
+            <a href="juridico.php">JURIDICO</a>
+            <a href="projetos.php">PROJETOS</a>
+            <a href="desenvolvimento.php">DESENVOLVIMENTO</a>
     </div><!--Nav-bar-->
     
     <div class="desenvolver">
