@@ -8,24 +8,25 @@ if (isset($_POST["pagar"]))
     $indice = $_POST["indice"];
     $valorf = $_POST["valorf"];
 
-    $conteudoJson = file_get_contents(__DIR__ . "/orcamentos.json");
+    $conteudoJson = file_get_contents(__DIR__ . "/orcamento.json");
     $orcamentos = json_decode($conteudoJson, true);
 
     if (isset($orcamentos[$indice])) 
     //VERIFICA SE QUAL VALOR DEVE SER ALTERADO: FALSE PARA TRUE
     {
-        $orcamentos[$indice]["pago"] = true;
+    $orcamentos[$indice]["valorf"] = $valorf;    
+    $orcamentos[$indice]["pago"] = true;
 
         $jsonAtualizado = json_encode(
             $orcamentos,
             JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
         );
 
-        file_put_contents(__DIR__ . "/orcamentos.json",$jsonAtualizado);
+        file_put_contents(__DIR__ . "/orcamento.json",$jsonAtualizado);
     }
 } 
 
-$conteudoJson = file_get_contents(__DIR__ . "/orcamentos.json");
+$conteudoJson = file_get_contents(__DIR__ . "/orcamento.json");
 $orcamentos = json_decode($conteudoJson, true);
 
 ?>
@@ -81,14 +82,11 @@ $orcamentos = json_decode($conteudoJson, true);
             <label for="valorf">INSIRA O VALOR: </label>
             <input type="number" name="valorf" value="<?= $indice; ?>"> 
 
-            <button class="submit" name="pagar">
-                PROPOR VALOR
-            </button>
+            <button class="submit" name="pagar"> PROPOR VALOR </button>
             
         </form>
 
         <?php }} ?>
-
 
     <?php if(empty($orcamentos)) { ?>
         

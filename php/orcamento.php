@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $projeto = $_POST["projeto"];
     $nomeProjeto = $_POST["nomeProjeto"];
     $prazo = $_POST["prazo"];
+    $pago = false;
 
 
     $novoOrcamento = [
@@ -18,7 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "empresa" => $empresa,
         "nomeProjeto" => $nomeProjeto,
         "projeto" => $projeto,
-        "prazo" => $prazo
+        "prazo" => $prazo,
+        "pago" => false
 
     ];
 
