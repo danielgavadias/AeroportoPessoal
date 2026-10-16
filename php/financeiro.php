@@ -64,13 +64,13 @@ $orcamentos = json_decode($conteudoJson, true);
         foreach($orcamentos as $indice => $orcamento){
     ?>
         <br>
-        <p>Responsavel: <?= $orcamento["responsavel"]?></p>
-        <p>Empresa: <?= $orcamento["empresa"]?></p>
-        <p>Nome do projeto: <?= $orcamento["nomeProjeto"]?></p>
-        <p>Projeto: <?= $orcamento["projeto"]?></p>
-        <p>Telefone: <?= $orcamento["telefone"]?></p>
-        <p>Email: <?= $orcamento["email"]?></p>
-        <p>Prazo: <?= $orcamento["prazo"]?></p>
+        <p><span class="item"> Responsavel: </span><?= $orcamento["responsavel"]?></p>
+        <p><span class="item"> Empresa: </span><?= $orcamento["empresa"]?></p>
+        <p><span class="item"> Nome do projeto: </span><?= $orcamento["nomeProjeto"]?></p>
+        <p><span class="item"> Projeto: </span><?= $orcamento["projeto"]?></p>
+        <p><span class="item"> Telefone: </span><?= $orcamento["telefone"]?></p>
+        <p><span class="item"> Email: </span><?= $orcamento["email"]?></p>
+        <p><span class="item"> Prazo: </span><?= $orcamento["prazo"]?></p>
      
         
         
