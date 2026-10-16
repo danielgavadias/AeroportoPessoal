@@ -57,3 +57,10 @@ p
     padding: 3px;
     color: #ffffff
 }
+
+title
+{
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+}
