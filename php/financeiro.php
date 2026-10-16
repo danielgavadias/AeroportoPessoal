@@ -70,9 +70,7 @@ $orcamentos = json_decode($conteudoJson, true);
                 <p><span class="item"> Telefone: </span><?= $orcamento["telefone"]?></p>
                 <p><span class="item"> Email: </span><?= $orcamento["email"]?></p>
                 <p><span class="item"> Prazo: </span><?= $orcamento["prazo"]?></p>
-        </div> 
-                
-                
+       
         <?php 
             if($orcamento["pago"] == false){
         ?>
@@ -91,6 +89,7 @@ $orcamentos = json_decode($conteudoJson, true);
                 <p>Valor: <?= $orcamento["valor"]?></p> <br>
                 
             <?php }} ?>
+        </div>
         </form>
 
         
