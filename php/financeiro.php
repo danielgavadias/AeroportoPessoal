@@ -58,8 +58,7 @@ $orcamentos = json_decode($conteudoJson, true);
     </div>
 
     <div class="orcamento">
-
-        
+           
     <?php 
         foreach($orcamentos as $indice => $orcamento){
     ?>
