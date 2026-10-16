@@ -58,21 +58,21 @@ $orcamentos = json_decode($conteudoJson, true);
     </div>
 
     <div class="orcamento">
-           
-    <?php 
-        foreach($orcamentos as $indice => $orcamento){
-    ?>
-        <br>
-        <p><span class="item"> Responsavel: </span><?= $orcamento["responsavel"]?></p>
-        <p><span class="item"> Empresa: </span><?= $orcamento["empresa"]?></p>
-        <p><span class="item"> Nome do projeto: </span><?= $orcamento["nomeProjeto"]?></p>
-        <p><span class="item"> Projeto: </span><?= $orcamento["projeto"]?></p>
-        <p><span class="item"> Telefone: </span><?= $orcamento["telefone"]?></p>
-        <p><span class="item"> Email: </span><?= $orcamento["email"]?></p>
-        <p><span class="item"> Prazo: </span><?= $orcamento["prazo"]?></p>
-     
-        
-        
+        <div class="cards">
+            <?php 
+                foreach($orcamentos as $indice => $orcamento){
+            ?>
+                <br>
+                <p><span class="item"> Responsavel: </span><?= $orcamento["responsavel"]?></p>
+                <p><span class="item"> Empresa: </span><?= $orcamento["empresa"]?></p>
+                <p><span class="item"> Nome do projeto: </span><?= $orcamento["nomeProjeto"]?></p>
+                <p><span class="item"> Projeto: </span><?= $orcamento["projeto"]?></p>
+                <p><span class="item"> Telefone: </span><?= $orcamento["telefone"]?></p>
+                <p><span class="item"> Email: </span><?= $orcamento["email"]?></p>
+                <p><span class="item"> Prazo: </span><?= $orcamento["prazo"]?></p>
+        </div> 
+                
+                
         <?php 
             if($orcamento["pago"] == false){
         ?>

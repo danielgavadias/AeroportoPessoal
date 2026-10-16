@@ -70,7 +70,7 @@ h1
     font-size: 50px;
 }
 
-.orcamento
+.cards
 {
     flex: 0 0 calc((100% - 40px) / 3);
     min-width: calc((100% - 40px) / 3);
