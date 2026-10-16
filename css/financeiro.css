@@ -75,4 +75,5 @@ h1
     flex: 0 0 calc((100% - 40px) / 3);
     min-width: calc((100% - 40px) / 3);
     box-sizing: border-box;
+    padding: 30px
 }
