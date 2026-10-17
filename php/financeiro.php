@@ -79,7 +79,7 @@ $orcamentos = json_decode($conteudoJson, true);
             <button class="submit" name="pagar"> PROPOR VALOR </button><br>
 
             <?php } else { ?>
-                <p>Valor: <?= $orcamento["valor"]?></p> <br>   
+                <p class="item">Valor: <?= $orcamento["valor"]?></p> <br>   
             </div> 
             <?php }} ?>
         
