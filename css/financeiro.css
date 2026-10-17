@@ -73,7 +73,6 @@ h1
 .cards
 {
     gap: 10px; 
-    display: flex;
     background-color: #00002c;
     color: aliceblue;
     padding: 30px
