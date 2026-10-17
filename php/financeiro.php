@@ -58,10 +58,10 @@ $orcamentos = json_decode($conteudoJson, true);
     </div>
 
     <div class="orcamento">
-        <div class="cards">
-            <?php 
-                foreach($orcamentos as $indice => $orcamento){
-            ?>
+        
+            <?php foreach($orcamentos as $indice => $orcamento){?>
+
+            <div class="cards">
                 <br>
                 <p><span class="item"> Responsavel: </span><?= $orcamento["responsavel"]?></p>
                 <p><span class="item"> Empresa: </span><?= $orcamento["empresa"]?></p>
@@ -71,25 +71,19 @@ $orcamentos = json_decode($conteudoJson, true);
                 <p><span class="item"> Email: </span><?= $orcamento["email"]?></p>
                 <p><span class="item"> Prazo: </span><?= $orcamento["prazo"]?></p>
        
-        <?php 
-            if($orcamento["pago"] == false){
-        ?>
+        <?php if($orcamento["pago"] == false){?>
 
-        <form method="POST">
-                
+        <form method="POST"> 
             <input type="hidden" name="indice" value="<?= $indice; ?>">  
             
-                <label for="valor">INSIRA O VALOR: </label>
-                <input type="number" name="valor"> 
-
-                <button class="submit" name="pagar"> PROPOR VALOR </button><br>
+            <input type="number" name="valor"> 
+            <button class="submit" name="pagar"> PROPOR VALOR </button><br>
 
             <?php } else { ?>
-
-                <p>Valor: <?= $orcamento["valor"]?></p> <br>
-                
+                <p>Valor: <?= $orcamento["valor"]?></p> <br>    
             <?php }} ?>
         </div>
+
         </form>
 
         
