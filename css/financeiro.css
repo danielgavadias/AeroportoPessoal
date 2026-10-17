@@ -79,5 +79,8 @@ h1
 {
     background-color: #00002c;
     color: aliceblue;
-    padding: 30px
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    
 }
