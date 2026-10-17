@@ -77,22 +77,22 @@ $orcamentos = json_decode($conteudoJson, true);
             
                 <input type="number" name="valor" min="0" step="0.01"> 
                 <button class="submit" name="pagar"> PROPOR VALOR </button><br>
-
+            
                 <?php } else { ?><!---->
                     <p><span class="item">Valor: </span><?= $orcamento["valor"]?></p> <br>   
             
-                <?php }} ?>
+                <?php }} ?></div> 
             </form>
          
         
 
         
             <?php if(empty($orcamentos)) { ?>
-                
+
                     <h2>Nenhum orçamento foi efetuado ainda</h2>
-                
+
             <?php } ?>
-        </div>    
+           
     </div>
 </body>
 </html>
