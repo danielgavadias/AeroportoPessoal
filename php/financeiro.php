@@ -58,10 +58,9 @@ $orcamentos = json_decode($conteudoJson, true);
     </div>
 
     <div class="orcamento">
-        <div class="cards">
+        
             <?php foreach($orcamentos as $indice => $orcamento){?>
-
-            
+            <div class="cards">
                 <br>
                 <p><span class="item"> Responsavel: </span><?= $orcamento["responsavel"]?></p>
                 <p><span class="item"> Empresa: </span><?= $orcamento["empresa"]?></p>
@@ -80,9 +79,10 @@ $orcamentos = json_decode($conteudoJson, true);
             <button class="submit" name="pagar"> PROPOR VALOR </button><br>
 
             <?php } else { ?>
-                <p>Valor: <?= $orcamento["valor"]?></p> <br>    
+                <p>Valor: <?= $orcamento["valor"]?></p> <br>   
+            </div> 
             <?php }} ?>
-        </div>
+        
 
         </form>
 
