@@ -70,9 +70,13 @@ h1
     font-size: 50px;
 }
 
+.orcamento
+{
+    display: flex;
+    gap: 20px;
+}
 .cards
 {
-    gap: 200px; 
     background-color: #00002c;
     color: aliceblue;
     padding: 30px
