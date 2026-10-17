@@ -80,8 +80,8 @@ $orcamentos = json_decode($conteudoJson, true);
             
                 <?php } else { ?><!---->
                     <p><span class="item">Valor: </span><?= $orcamento["valor"]?></p> <br>   
-            
-                <?php }} ?></div> 
+            </div> 
+                <?php }} ?>
             </form>
          
         
