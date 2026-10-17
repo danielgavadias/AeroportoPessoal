@@ -54,7 +54,7 @@ $orcamentos = json_decode($conteudoJson, true);
     <!-- Cabeçalho principal -->
      <div class="cabecalho">
         <h1>FINANCEIRO</h1>
-        <p>Consulte os projetos que ainda aguardam confirmação de pagamento</p>
+        <p class="subtit">Consulte os projetos que ainda aguardam confirmação de pagamento</p>
     </div>
 
     <div class="orcamento">

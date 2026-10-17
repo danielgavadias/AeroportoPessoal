@@ -70,9 +70,22 @@ h1
     font-size: 50px;
 }
 
+.subtit
+{
+    color: #00f7ff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 5px;  
+}
+
 .orcamento
 {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 .cards
