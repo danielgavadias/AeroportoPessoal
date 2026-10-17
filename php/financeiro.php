@@ -75,7 +75,7 @@ $orcamentos = json_decode($conteudoJson, true);
         <form method="POST"> 
             <input type="hidden" name="indice" value="<?= $indice; ?>">  
             
-            <input type="number" name="valor" min="0" step="0.1"> 
+            <input type="number" name="valor" min="0" step="0.01"> 
             <button class="submit" name="pagar"> PROPOR VALOR </button><br>
 
             <?php } else { ?>
