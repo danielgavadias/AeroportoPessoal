@@ -93,10 +93,10 @@ h1
 {
     background-color: #344B53;
     color: #67E8F9;
-    border-radius: 20px;
+    border-radius: 8px;
     text-align: center;
     min-width: 350px;
     flex-wrap: wrap;
     height: 200px ;
-    padding: 5px;
+    padding: 8px;
 }
