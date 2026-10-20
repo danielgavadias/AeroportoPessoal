@@ -103,4 +103,8 @@ h1
     padding: 8px;
     margin-top: 6px;
     margin-bottom: 24px;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
