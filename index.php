@@ -1,3 +1,5 @@
+
+
 <?php 
 $arquivoConcluidos = __DIR__ . "/concluidos.json";
 $concluidos = [];
@@ -7,7 +9,7 @@ if (file_exists($arquivoConcluidos)) {
     $concluidos = json_decode($conteudo, true) ?? [];
 }
 
-$totalCards = 6; 
+$totalCards = 8 ; 
 ?>
 
 <!DOCTYPE html>
@@ -20,15 +22,17 @@ $totalCards = 6;
 </head>
 <body>
 
-    <div class="Nav-bar">
-        <img src="imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
-        <a href="index.php">INICIO</a>
-        <a href="php/orcamento.php">ORÇAMENTO</a>
-        <a href="php/financeiro.php">FINANCEIRO</a>
-        <a href="php/juridico.php">JURIDICO</a>
-        <a href="php/cliente.php">CLIENTES</a>
-        <a href="php/desenvolvimento.php">DESENVOLVIMENTO</a>
-    </div><!--Nav-bar-->
+    <nav> 
+        <div class="Nav-bar">
+            <img src="imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
+            <a href="index.php">INICIO</a>
+            <a href="php/orcamento.php">ORÇAMENTO</a>
+            <a href="php/financeiro.php">FINANCEIRO</a>
+            <a href="php/juridico.php">JURIDICO</a>
+            <a href="php/cliente.php">CLIENTES</a>
+            <a href="php/desenvolvimento.php">DESENVOLVIMENTO</a>
+        </div>
+    </nav><!--Nav-bar-->
    
     <div class="apresentacao">
         <img src="imgHtml/Gemini_Generated_Image_22akzh22akzh22ak__1_-removebg-preview.png" alt="">
@@ -53,6 +57,7 @@ $totalCards = 6;
                 
                 // Verifica se existe um projeto concluído salvo nesta posição
                 $temProjeto = isset($concluidos[$i]);
+                
             ?>
 
             <div class="card">
@@ -88,6 +93,6 @@ $totalCards = 6;
         <?php endfor; ?>
     </div>
 </section>
-          <script src="projetos.js"></script>          
+                   
 </body>
 </html>
