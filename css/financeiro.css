@@ -110,4 +110,5 @@ h1
  
     box-sizing: border-box;
     overflow-wrap: anywhere;
+    flex: 0 0 calc(50% - 10px);
 }
