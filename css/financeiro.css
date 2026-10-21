@@ -103,5 +103,5 @@ h1
     padding: 8px;
     margin-top: 6px;
     margin-bottom: 24px;
-
+    box-sizing: border-box;
 }
