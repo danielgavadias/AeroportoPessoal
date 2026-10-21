@@ -8,21 +8,28 @@ if (isset($_POST["pagar"]))
     $indice = $_POST["indice"];
     $valor = $_POST["valor"];
 
-    $conteudoJson = file_get_contents(__DIR__ . "/orcamento.json");
-    $orcamentos = json_decode($conteudoJson, true);
-
-    if (isset($orcamentos[$indice])) 
-    //VERIFICA SE QUAL VALOR DEVE SER ALTERADO: FALSE PARA TRUE
+    if ($valor === "" || !is_numeric($valor)) {
+        // Não atualiza o orçamento
+    }
+   
+    else
     {
-    $orcamentos[$indice]["valor"] = $valor;    
-    $orcamentos[$indice]["pago"] = true;
+        $conteudoJson = file_get_contents(__DIR__ . "/orcamento.json");
+        $orcamentos = json_decode($conteudoJson, true);
 
-        $jsonAtualizado = json_encode(
-            $orcamentos,
-            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
-        );
+        if (isset($orcamentos[$indice])) 
+        //VERIFICA SE QUAL VALOR DEVE SER ALTERADO: FALSE PARA TRUE
+        {
+        $orcamentos[$indice]["valor"] = $valor;    
+        $orcamentos[$indice]["pago"] = true;
 
-        file_put_contents(__DIR__ . "/orcamento.json",$jsonAtualizado);
+            $jsonAtualizado = json_encode(
+                $orcamentos,
+                JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+            );
+
+            file_put_contents(__DIR__ . "/orcamento.json",$jsonAtualizado);
+        }
     }
 } 
 
