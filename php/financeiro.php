@@ -77,7 +77,7 @@ $orcamentos = json_decode($conteudoJson, true);
                 <p><span class="item"> Email: </span><?= $orcamento["email"]?></p>
                 <p><span class="item"> Prazo: </span><?= $orcamento["prazo"]?></p>
                 
-                <?php if(!isset($orcamento["valor"])){?>
+                <?php if(!isset($orcamento["valor"]) || $orcamento["valor"] === ""){?>
                     
                     <form method="POST">
                         <input type="hidden" name="indice" value="<?= $indice; ?>">
