@@ -57,7 +57,7 @@ $orcamentos = json_decode($conteudoJson, true);
         <p class="subtit">Consulte os projetos que ainda aguardam confirmação de pagamento</p>
     </div>
 
-    <!----><div class="orcamento"><!---->
+        <div class="orcamento"><!---->
         
             <?php foreach($orcamentos as $indice => $orcamento){?>
             <!----><div class="cards"><!---->
@@ -70,21 +70,24 @@ $orcamentos = json_decode($conteudoJson, true);
                 <p><span class="item"> Email: </span><?= $orcamento["email"]?></p>
                 <p><span class="item"> Prazo: </span><?= $orcamento["prazo"]?></p>
                 
-                <?php if($orcamento["pago"] == false || $orcamento["valor"] == NULL){?>
-            <form method="POST">
+                <?php if(!isset($orcamento["valor"])){?>
+                    
+                    <form method="POST">
                         <input type="hidden" name="indice" value="<?= $indice; ?>">
-             
                         <input type="number" name="valor" min="0" step="0.01" required> 
                         <button class="submit" name="pagar"> PROPOR VALOR </button><br>
+                    </form> 
 
-                <?php } else { ?>
-                    <p><span class="item">Valor: </span><?= $orcamento["valor"]?></p> <br>
-                <?php }?> 
+                        <?php } else { ?>
+
+                            <p><span class="item">Valor: </span><?= $orcamento["valor"]?></p> <br>
+                       
+                        <?php }?> 
                     
-                </div> 
+                <!----></div><!---->
                 
                 <?php } ?>
-            </form>  
+             
 
             <?php if(empty($orcamentos)) { ?>
 
@@ -92,6 +95,6 @@ $orcamentos = json_decode($conteudoJson, true);
 
             <?php } ?>
            
-    <!----></div><!---->
+        </div>
 </body>
 </html>
