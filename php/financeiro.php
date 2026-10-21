@@ -17,7 +17,7 @@ if (isset($_POST["pagar"]))
         $conteudoJson = file_get_contents(__DIR__ . "/orcamento.json");
         $orcamentos = json_decode($conteudoJson, true);
 
-        if (isset($orcamentos[$indice])) 
+        if (isset($orcamentos[$indice]) && is_numeric($indice)) 
         //VERIFICA SE QUAL VALOR DEVE SER ALTERADO: FALSE PARA TRUE
         {
         $orcamentos[$indice]["valor"] = $valor;    
