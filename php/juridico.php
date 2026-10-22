@@ -19,12 +19,6 @@ $valor_orçamento = isset($_GET['valor']) ? htmlspecialchars($_GET['valor']) : "
 
         <div class="Nav-bar">
             <img src="../imgHtml/Gemini_Generated_Image_5kpxl15kpxl15kpx-removebg-preview.png" alt="">
-            <a href="../index.php">INICIO</a>
-            <a href="orcamento.php">ORÇAMENTO</a>
-            <a href="financeiro.php">FINANCEIRO</a>
-            <a href="juridico.php">JURIDICO</a>
-            <a href="cliente.php">CLIENTES</a>
-            <a href="desenvolvimento.php">DESENVOLVIMENTO</a>
         </div><!--Nav-bar-->
 
     <!-- Cabeçalho Principal -->
@@ -106,9 +100,7 @@ $valor_orçamento = isset($_GET['valor']) ? htmlspecialchars($_GET['valor']) : "
                             <input type="hidden" name="cliente_doc" value="<?php echo $cliente_doc;?>"> 
                             <input type="hidden" name="valor_orçamento" value="<?php echo $valor_orçamento;?>">
                             
-                            <button type="submit" style="background-color: #28a745; color: white; padding: 10px 15px; border: nome; border-radius: 4px; cursor: pointer">
-                                Enviar Contrato para Assinatura
-                            </button>
+                            <a href="enviar_assinaturas.php">Ver Termos</a>
                             
                         </form>
                     </div>
@@ -120,7 +112,7 @@ $valor_orçamento = isset($_GET['valor']) ? htmlspecialchars($_GET['valor']) : "
 
     <footer class="legal-footer">
         <div class="container">
-            <p>&copy; 2026 5 Devs e Um Sonho. Todos os direitos reservados. Projeto Acadêmico - Técnico em Desenvolvimento de Sistemas. Realizado por Amanda Orlatei.</p>
+            <p>&copy; 2026 5 Devs e Um Sonho. Todos os direitos reservados. Projeto Acadêmico - Técnico em Desenvolvimento de Sistemas. Ediatdo por Eduardo Augusto.</p>
         </div>
     </footer>
 

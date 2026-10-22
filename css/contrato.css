@@ -1,0 +1,80 @@
+body{
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+}
+
+.Nav-bar{
+    background-color: rgb(25, 37, 41);
+    width: 100%;
+    height: 50px;
+    margin-top: 0;
+    color: white;
+    padding: 10px 0 ;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.Nav-bar img
+{
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+    margin-left: -80px;
+}
+
+.terms
+{
+    background-color: rgb(25, 37, 41);
+    width: 718px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 36%;
+    height:800px ;
+    border-radius: 7px;
+}
+
+.termos
+{
+    width: 700px;
+    height: 800px;
+    margin-left: 4px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    padding: 5px 5px;
+}
+
+.test_ass{
+    color: black;
+}
+
+.test_ass a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1_teste a{
+    color: green;
+}
+
+.h1_teste2 a
+{
+    color: red;
+}
+
+.h1_teste :hover
+{
+    color:  rgb(25, 37, 41);
+}
+
+.h1_teste2 :hover
+{
+    color:  rgb(25, 37, 41);
+}

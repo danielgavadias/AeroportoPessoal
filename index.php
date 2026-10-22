@@ -9,7 +9,7 @@ if (file_exists($arquivoConcluidos)) {
     $concluidos = json_decode($conteudo, true) ?? [];
 }
 
-$totalCards = 8 ; 
+$totalCards = 8; 
 ?>
 
 <!DOCTYPE html>
@@ -88,11 +88,18 @@ $totalCards = 8 ;
                     </div>
 
                     <a href="#">Ver Projetos</a>
+                    $totalCards +1;
                 <?php endif; ?>
             </div>
         <?php endfor; ?>
     </div>
 </section>
+
+<footer class="legal-footer">
+    <div class="container">
+        <p>&copy; 2026 5 Devs e Um Sonho. Todos os direitos reservados. Projeto Acadêmico - Técnico em Desenvolvimento de Sistemas.</p>
+    </div>
+</footer>
                    
 </body>
 </html>
